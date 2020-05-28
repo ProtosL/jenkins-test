@@ -4,9 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                cd './my-app'
-                npm install &&
-                npm run build
+                sh 'npm install'
+                sh 'npm run build'
                 echo 'Hello world'
 		        echo 'Hello jenkins'
             }
